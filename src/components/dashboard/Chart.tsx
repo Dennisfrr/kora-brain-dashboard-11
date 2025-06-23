@@ -36,24 +36,25 @@ export const Chart: React.FC<ChartProps> = ({ type, data }) => {
     return (
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-          <XAxis dataKey="name" stroke="#64748b" fontSize={12} />
-          <YAxis stroke="#64748b" fontSize={12} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+          <XAxis dataKey="name" stroke="#9ca3af" fontSize={12} />
+          <YAxis stroke="#9ca3af" fontSize={12} />
           <Tooltip 
             contentStyle={{ 
-              backgroundColor: 'white', 
-              border: '1px solid #e2e8f0',
+              backgroundColor: '#1f2937', 
+              border: '1px solid #374151',
               borderRadius: '8px',
-              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.5)',
+              color: '#ffffff'
             }} 
           />
           <Line 
             type="monotone" 
             dataKey="value" 
-            stroke="#3b82f6" 
+            stroke="#ffffff" 
             strokeWidth={3}
-            dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
-            activeDot={{ r: 6, fill: '#1d4ed8' }}
+            dot={{ fill: '#ffffff', strokeWidth: 2, r: 4 }}
+            activeDot={{ r: 6, fill: '#d1d5db' }}
           />
         </LineChart>
       </ResponsiveContainer>
@@ -64,18 +65,19 @@ export const Chart: React.FC<ChartProps> = ({ type, data }) => {
     return (
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-          <XAxis dataKey="name" stroke="#64748b" fontSize={12} />
-          <YAxis stroke="#64748b" fontSize={12} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+          <XAxis dataKey="name" stroke="#9ca3af" fontSize={12} />
+          <YAxis stroke="#9ca3af" fontSize={12} />
           <Tooltip 
             contentStyle={{ 
-              backgroundColor: 'white', 
-              border: '1px solid #e2e8f0',
+              backgroundColor: '#1f2937', 
+              border: '1px solid #374151',
               borderRadius: '8px',
-              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.5)',
+              color: '#ffffff'
             }} 
           />
-          <Bar dataKey="value" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="value" fill="#ffffff" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     );
@@ -100,10 +102,11 @@ export const Chart: React.FC<ChartProps> = ({ type, data }) => {
           </Pie>
           <Tooltip 
             contentStyle={{ 
-              backgroundColor: 'white', 
-              border: '1px solid #e2e8f0',
+              backgroundColor: '#1f2937', 
+              border: '1px solid #374151',
               borderRadius: '8px',
-              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+              boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.5)',
+              color: '#ffffff'
             }} 
           />
         </PieChart>
