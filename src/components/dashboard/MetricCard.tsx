@@ -22,16 +22,16 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   description
 }) => {
   return (
-    <Card className="bg-white/60 backdrop-blur-sm border-slate-200/60 hover:bg-white/80 transition-all duration-200">
+    <Card className="bg-slate-800/60 backdrop-blur-sm border-slate-700/60 hover:bg-slate-800/80 transition-all duration-200">
       <CardContent className="p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-xl flex items-center justify-center">
-              <Icon className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-xl flex items-center justify-center">
+              <Icon className="w-6 h-6 text-blue-400" />
             </div>
             <div>
-              <p className="text-sm font-medium text-slate-600">{title}</p>
-              <p className="text-2xl font-bold text-slate-900">{value}</p>
+              <p className="text-sm font-medium text-slate-400">{title}</p>
+              <p className="text-2xl font-bold text-slate-100">{value}</p>
             </div>
           </div>
         </div>
@@ -40,9 +40,9 @@ export const MetricCard: React.FC<MetricCardProps> = ({
           <span
             className={cn(
               "text-sm font-medium",
-              changeType === 'positive' && "text-green-600",
-              changeType === 'negative' && "text-red-600",
-              changeType === 'neutral' && "text-slate-600"
+              changeType === 'positive' && "text-green-400",
+              changeType === 'negative' && "text-red-400",
+              changeType === 'neutral' && "text-slate-400"
             )}
           >
             {change}
