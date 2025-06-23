@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils';
 import { 
   BarChart3, 
   Users, 
-  Brain, 
   Database, 
   Settings, 
   Target,
@@ -25,18 +24,14 @@ export const DashboardSidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-64 bg-slate-900/95 backdrop-blur-sm border-r border-slate-700/60 flex flex-col">
-      <div className="p-6 border-b border-slate-700/60">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
-            <Brain className="w-6 h-6 text-white" />
-          </div>
-          <div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text text-transparent">
-              Kora Brain
-            </h1>
-            <p className="text-sm text-slate-400">Dashboard IA</p>
-          </div>
+    <div className="w-64 bg-black border-r border-gray-800 flex flex-col">
+      <div className="p-6 border-b border-gray-800">
+        <div className="flex items-center justify-center">
+          <img 
+            src="/images/bma-logo.png" 
+            alt="BMA Logo" 
+            className="h-16 w-auto object-contain"
+          />
         </div>
       </div>
 
@@ -50,26 +45,26 @@ export const DashboardSidebar = () => {
               key={item.name}
               to={item.href}
               className={cn(
-                "flex items-center px-3 py-3 text-sm font-medium rounded-xl transition-all duration-200",
+                "flex items-center px-3 py-3 text-sm font-medium rounded-lg transition-all duration-200",
                 isActive
-                  ? "bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg shadow-blue-500/25"
-                  : "text-slate-300 hover:text-slate-100 hover:bg-slate-800/60"
+                  ? "bg-white text-black shadow-lg"
+                  : "text-white hover:text-gray-300 hover:bg-gray-900"
               )}
             >
-              <item.icon className={cn("mr-3 h-5 w-5", isActive ? "text-white" : "text-slate-400")} />
+              <item.icon className={cn("mr-3 h-5 w-5", isActive ? "text-black" : "text-gray-400")} />
               {item.name}
             </Link>
           );
         })}
       </nav>
 
-      <div className="p-4 border-t border-slate-700/60">
-        <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-600/30 rounded-xl p-4">
+      <div className="p-4 border-t border-gray-800">
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4">
           <div className="flex items-center mb-2">
-            <Zap className="w-5 h-5 text-green-400 mr-2" />
-            <span className="text-sm font-medium text-green-300">Sistema Ativo</span>
+            <Zap className="w-5 h-5 text-white mr-2" />
+            <span className="text-sm font-medium text-white">Sistema Ativo</span>
           </div>
-          <p className="text-xs text-green-400">
+          <p className="text-xs text-gray-400">
             Agente funcionando perfeitamente
           </p>
         </div>

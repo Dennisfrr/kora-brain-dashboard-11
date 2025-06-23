@@ -14,12 +14,12 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const Dashboard = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-black">
         <div className="flex h-screen">
           <DashboardSidebar />
           <div className="flex-1 flex flex-col overflow-hidden">
             <DashboardHeader />
-            <main className="flex-1 overflow-y-auto p-6">
+            <main className="flex-1 overflow-y-auto p-6 bg-gray-950">
               <Routes>
                 <Route path="/" element={<OverviewPage />} />
                 <Route path="/leads" element={<LeadsPage />} />

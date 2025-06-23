@@ -9,14 +9,14 @@ export const DashboardHeader = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/60 px-6 py-4">
+    <header className="bg-black border-b border-gray-800 px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4 flex-1">
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-4 h-4" />
             <Input
               placeholder="Buscar leads, dados, configurações..."
-              className="pl-10 bg-slate-800/60 border-slate-600/60 focus:bg-slate-700 text-slate-100 placeholder:text-slate-400"
+              className="pl-10 bg-gray-900 border-gray-700 focus:bg-gray-800 text-white placeholder:text-gray-500"
             />
           </div>
         </div>
@@ -26,23 +26,23 @@ export const DashboardHeader = () => {
             variant="ghost" 
             size="sm" 
             onClick={toggleTheme}
-            className="text-slate-300 hover:text-slate-100 hover:bg-slate-800"
+            className="text-gray-300 hover:text-white hover:bg-gray-900"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </Button>
           
-          <Button variant="ghost" size="sm" className="relative text-slate-300 hover:text-slate-100 hover:bg-slate-800">
+          <Button variant="ghost" size="sm" className="relative text-gray-300 hover:text-white hover:bg-gray-900">
             <Bell className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+            <span className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full"></span>
           </Button>
           
-          <div className="flex items-center space-x-3 pl-3 border-l border-slate-600/60">
+          <div className="flex items-center space-x-3 pl-3 border-l border-gray-700">
             <div className="text-right">
-              <p className="text-sm font-medium text-slate-100">Admin</p>
-              <p className="text-xs text-slate-400">Sistema Kora</p>
+              <p className="text-sm font-medium text-white">Admin</p>
+              <p className="text-xs text-gray-400">Sistema BMA</p>
             </div>
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
-              <User className="w-4 h-4 text-white" />
+            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+              <User className="w-4 h-4 text-black" />
             </div>
           </div>
         </div>
